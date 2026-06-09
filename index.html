@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="card">
+        <h2>Secure Password Tool</h2>
+        <div class="strength-container">
+            <svg class="ring-canvas" width="150" height="150">
+                <circle class="bg-ring" cx="75" cy="75" r="60" stroke-width="12" fill="transparent"/>
+                <circle class="progress-ring" cx="75" cy="75" r="60" stroke-width="12" fill="transparent"/>
+            </svg>
+            <div class="percentage-display">0%</div>
+        </div>
+        <div class="output-container">
+            <input type="text" readonly id="password-display" placeholder="Click Generate....">
+            <button id="copy-btn">Copy</button>
+        </div>
+        <div class="control-group">
+            <div class="label-row">
+                <label for="length-slider">Passwrod Length</label>
+                <span id="length-val">12</span>
+            </div>
+            <input type="range" id="length-slider" max="30" min="8" value="12">
+        </div>
+        <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="checkbox"  id="uppercase" checked> Include Uppercase
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox"  id="lowercase" checked> Include Lowercase
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox"  id="numbers" checked> Include Numbers
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox"  id="symbols" checked> Include Symbols   
+            </label>
+        </div>
+        <button id="generate-btn">Generate Password</button>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
